@@ -1,0 +1,13 @@
+<% provide(:title, t("header.home")) %>
+<div class="container text-center">
+  <%= render "carousel" %>
+  <hr>
+    <h1><%= t "product.list_product" %></h1>
+  <hr>
+  <div class="row">
+    <%= render @products || t("product.product_nil") %>
+  </div>
+  <div class="willginate">
+  <%= will_paginate @products %>
+  </div>
+</div>
